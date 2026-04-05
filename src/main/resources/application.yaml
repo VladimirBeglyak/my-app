@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: demo-project
+
+server:
+  address: 0.0.0.0
