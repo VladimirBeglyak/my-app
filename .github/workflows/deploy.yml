@@ -32,9 +32,11 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gradle-
 
-      # 4. Собираем проект через Gradle (создаёт fat JAR в build/libs/)
+      - name: Make gradlew executable
+        run: chmod +x gradl
+
       - name: Build with Gradle
-        run: ./gradlew clean bootJar -x test   # bootJar для Spring Boot, или просто jar
+        run: ./gradlew clean bootJar -x test
 
       # 5. (Опционально) Проверяем, что JAR создался
       - name: List built JAR
