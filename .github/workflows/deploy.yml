@@ -33,7 +33,7 @@ jobs:
             ${{ runner.os }}-gradle-
 
       - name: Make gradlew executable
-        run: chmod +x gradl
+        run: chmod +x gradle
 
       - name: Build with Gradle
         run: ./gradlew clean bootJar -x test
