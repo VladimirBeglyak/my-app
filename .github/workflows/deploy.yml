@@ -3,7 +3,7 @@ name: Deploy to VPS
 on:
   push:
     branches:
-      - main   # Автодеплой при пуше в main
+      - master   # Автодеплой при пуше в main
 
 jobs:
   deploy:
