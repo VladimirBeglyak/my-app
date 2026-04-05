@@ -49,10 +49,10 @@ jobs:
           host: ${{ secrets.VPS_HOST }}
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.VPS_SSH_KEY }}
-          source: "build/libs/my-app-*.jar"
+          source: "build/libs/my-app.jar"
           target: "/opt/my-app/"
-          strip_components: 2          # убирает путь build/libs/
           overwrite: true
+          debug: true
 
       # 7. Переименовываем JAR в фиксированное имя (для удобства systemd)
       - name: Rename JAR on VPS
